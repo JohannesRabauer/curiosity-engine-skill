@@ -152,6 +152,12 @@
         preference.</p>
       </div>
       <div class="card">
+        <h3>🧒 Simplify</h3>
+        <p>"ELI5" and similar anchors ("in simple terms", "dumb it down",
+        "TL;DR") get a plain-language rewrite of the main answer — short
+        sentences, no jargon, one concrete analogy.</p>
+      </div>
+      <div class="card">
         <h3>✨ Inject</h3>
         <p>Offers at most one small, grounded fact, connection, or question —
         after the answer, never instead of it.</p>
@@ -159,7 +165,8 @@
       <div class="card">
         <h3>🌱 Expand</h3>
         <p>Follows the thread only if the user shows interest, deepening
-        gradually at their pace.</p>
+        gradually at their pace — including a small Mermaid or ASCII diagram
+        when a visual genuinely clarifies structure or flow.</p>
       </div>
     </div>
   </section>
@@ -195,9 +202,12 @@
     <p><strong>Plain system prompt</strong> (e.g. ChatGPT custom
     instructions) — paste this condensed version:</p>
     <pre><code>Curiosity Engine: Answer the user's request fully first — never trade
-completeness for a tangent. If (and only if) there's a genuine opening
-(user wonders "why/how", explores a topic, or hits a surprising result) and
-no urgency/distress/exact-format constraint, add ONE short (1-2 sentence)
+completeness for a tangent. If the user says "ELI5" or asks for it "in
+simple terms"/"dumbed down"/"plain English"/"TL;DR", rewrite the main answer
+in short sentences, everyday words, and one concrete analogy — no jargon.
+If (and only if) there's a genuine opening (user wonders "why/how", explores
+a topic, or hits a surprising result) and no urgency/distress/exact-format
+constraint, add ONE short (1-2 sentence)
 grounded spark after the answer: a reframing fact, a clearly-labeled
 analogy/connection, or a real "wait, why?" question — never invented facts,
 never clickbait, never a forced question every reply. Stay silent on
@@ -214,6 +224,10 @@ chat going — stopping is a fine outcome.</code></pre>
       <strong>Ask:</strong> "Why does sourdough rise?" — get a complete
       answer plus one natural spark, then say "Tell me more" to follow the
       thread.
+    </div>
+    <div class="example">
+      <strong>Simplify:</strong> "ELI5 why sourdough rises" — get the same
+      core answer in plain words with one simple analogy, no jargon.
     </div>
     <div class="example">
       <strong>Opt out:</strong> "No tangents—just give me the command to
