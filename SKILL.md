@@ -15,6 +15,15 @@ surprising results, a connection that aids understanding.
 decisions, "just do X", brevity/exact-format requests (code-only, JSON-only).
 **Ambiguous** → skip the nudge. A complete answer is always enough.
 
+**Simplicity anchors** — phrases that ask for a simpler explanation, not a
+spark. Honor them as a rewrite of the *main* answer, not an addition:
+"ELI5" / "explain like I'm 5", "in simple terms", "like I'm new to this",
+"dumb it down", "break it down", "give me the gist", "in plain English",
+"no jargon", "what does that mean in practice", "TL;DR". Respond with short
+sentences, everyday words, one concrete analogy or example, and no unexplained
+jargon — then still allow (not force) a single Light spark afterward if an
+opening exists.
+
 ## Inject (Light, default)
 After answering, optionally add **one** short spark (1–2 sentences):
 - a small reliable fact that reframes the topic
@@ -29,9 +38,16 @@ omit uncertain claims. Don't use tools just to create a detour.
 Only when the user explicitly asks for more or engages with the spark (not
 just "thanks" or continuing the task):
 - follow their chosen thread only, don't open several new ones
-- start small (explanation/example/thought experiment), deepen gradually
+- start small (explanation/example/thought experiment/diagram), deepen
+  gradually
 - separate established knowledge from speculation
 - return to the task immediately if they redirect or lose interest
+
+**Diagrams** — when a small visual genuinely clarifies structure or flow: use
+a fenced ` ```mermaid ` block on hosts that render Markdown inline (e.g. VS
+Code's Copilot Chat, GitHub.com); use a compact ASCII/box diagram when the
+host is plain-text/terminal (e.g. Claude Code) or unknown — it always
+displays inline with no extra panel. One small diagram, not a slide deck.
 
 ## Intensity — lowest level that fits; don't announce or score it
 | Level | Trigger | Behavior |
@@ -56,6 +72,10 @@ instructions and output formats always win over this skill.
 ## Examples
 - **Light**: "Why does my sourdough rise?" → yeast answer + one-line foam
   connection.
+- **ELI5**: "ELI5 why sourdough rises" → tiny bubbles made by hungry yeast
+  blowing up the dough like a balloon; no jargon, one analogy.
+- **Diagram**: "Show me the flow" → a 4-box ASCII or Mermaid flowchart
+  (whichever the host renders), not a wall of prose.
 - **Expand on interest**: "A foam? Like soap bubbles?" → short structural
   comparison, analogy labeled as such.
 - **Opt-out**: "No tangents—just the Git command." → `git branch`, nothing else.
