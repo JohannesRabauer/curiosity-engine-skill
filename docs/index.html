@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Curiosity Engine — an Agent Skill that sparks wonder</title>
+<meta name="description" content="Curiosity Engine is an Agent Skill (SKILL.md) that helps AI assistants finish the user's task first, then gently spark curiosity with one grounded fact, connection, or question — never forced, never invented." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>" />
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-alt: #161b22;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --accent: #ffcb47;
+    --accent-2: #58a6ff;
+    --border: #30363d;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header.hero {
+    padding: 5rem 1.5rem 3.5rem;
+    text-align: center;
+    background: radial-gradient(60% 60% at 50% 0%, #1c2433 0%, var(--bg) 70%);
+    border-bottom: 1px solid var(--border);
+  }
+  .emoji { font-size: 3.5rem; display: block; margin-bottom: 1rem; }
+  header.hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin: 0 0 0.75rem;
+  }
+  header.hero p.tagline {
+    color: var(--muted);
+    font-size: 1.15rem;
+    max-width: 640px;
+    margin: 0 auto 1.75rem;
+  }
+  .cta-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 0.65rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+  }
+  .btn.primary {
+    background: var(--accent);
+    color: #1a1300;
+    border-color: var(--accent);
+  }
+  .btn.primary:hover { text-decoration: none; filter: brightness(1.08); }
+  .btn.secondary { color: var(--fg); }
+  .btn.secondary:hover { text-decoration: none; border-color: var(--accent-2); }
+  main { max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+  section { margin-bottom: 3rem; }
+  h2 {
+    font-size: 1.5rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+  .card h3 { margin-top: 0; font-size: 1.05rem; }
+  .card p { color: var(--muted); margin-bottom: 0; font-size: 0.95rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+  th { color: var(--accent); }
+  tr:last-child td { border-bottom: none; }
+  pre {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.88rem;
+  }
+  code { font-family: "SFMono-Regular", Consolas, Menlo, monospace; }
+  .example {
+    border-left: 3px solid var(--accent-2);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--muted);
+  }
+  .example strong { color: var(--fg); }
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="emoji">💡</span>
+  <h1>Curiosity Engine</h1>
+  <p class="tagline">
+    An Agent Skill that finishes your task first — then, only when it
+    genuinely fits, sparks a little curiosity. Nothing forced, nothing
+    invented, just space to wonder.
+  </p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://github.com/JohannesRabauer/curiosity-engine-skill">View on GitHub</a>
+    <a class="btn secondary" href="https://github.com/JohannesRabauer/curiosity-engine-skill/blob/main/SKILL.md">Read SKILL.md</a>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🔎 Detect</h3>
+        <p>Notices genuine openings for wonder — "why?", exploration, a
+        surprising result — while respecting focus, urgency, and
+        preference.</p>
+      </div>
+      <div class="card">
+        <h3>✨ Inject</h3>
+        <p>Offers at most one small, grounded fact, connection, or question —
+        after the answer, never instead of it.</p>
+      </div>
+      <div class="card">
+        <h3>🌱 Expand</h3>
+        <p>Follows the thread only if the user shows interest, deepening
+        gradually at their pace.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Intensity adapts to you</h2>
+    <table>
+      <thead>
+        <tr><th>Level</th><th>Trigger</th><th>Behavior</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Off</strong></td><td>focus / urgency / sensitive / opt-out</td><td>no additions</td></tr>
+        <tr><td><strong>Light</strong></td><td>relevant opening, no invitation</td><td>≤1 spark, no follow-up</td></tr>
+        <tr><td><strong>Engaged</strong></td><td>user explores the spark</td><td>concise expansion of that thread</td></tr>
+        <tr><td><strong>Deep</strong></td><td>user welcomes sustained exploration</td><td>fuller exploration at their pace</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--muted); margin-top:0.75rem;">
+      Ignored nudges never escalate. "No tangents" turns them off for the rest
+      of the conversation. Accuracy, privacy, safety, and completing the
+      user's actual request always come first.
+    </p>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <p><strong>Agent Skills hosts</strong> (anything that supports
+    <code>SKILL.md</code>): copy this repository's
+    <a href="https://github.com/JohannesRabauer/curiosity-engine-skill/blob/main/SKILL.md">SKILL.md</a>
+    into a directory named <code>curiosity-engine</code> inside your
+    assistant's supported skills location, or use its skill-import feature.
+    No packages, API keys, or build step required.</p>
+    <p><strong>Plain system prompt</strong> (e.g. ChatGPT custom
+    instructions) — paste this condensed version:</p>
+    <pre><code>Curiosity Engine: Answer the user's request fully first — never trade
+completeness for a tangent. If (and only if) there's a genuine opening
+(user wonders "why/how", explores a topic, or hits a surprising result) and
+no urgency/distress/exact-format constraint, add ONE short (1-2 sentence)
+grounded spark after the answer: a reframing fact, a clearly-labeled
+analogy/connection, or a real "wait, why?" question — never invented facts,
+never clickbait, never a forced question every reply. Stay silent on
+code-only/JSON-only/"just do X"/brief requests. If the user engages with the
+spark, follow *their* thread with a concise expansion; if ignored, drop it
+and don't repeat next turn. "No tangents"/"be brief" = opt out for the rest
+of the conversation. Never pressure, repeat, or stack sparks to keep the
+chat going — stopping is a fine outcome.</code></pre>
+  </section>
+
+  <section>
+    <h2>Try it</h2>
+    <div class="example">
+      <strong>Ask:</strong> "Why does sourdough rise?" — get a complete
+      answer plus one natural spark, then say "Tell me more" to follow the
+      thread.
+    </div>
+    <div class="example">
+      <strong>Opt out:</strong> "No tangents—just give me the command to
+      list Git branches." — get <code>git branch</code>, nothing else.
+    </div>
+  </section>
+
+  <section>
+    <h2>How to validate it</h2>
+    <p>This repository contains instructions rather than executable code;
+    verify behavior in your host assistant by checking that:</p>
+    <ul>
+      <li>A relevant learning question receives a complete answer and at most one spark.</li>
+      <li>A follow-up about that spark gets a focused expansion.</li>
+      <li>An ignored spark is not repeated or escalated on the next turn.</li>
+      <li>An opt-out remains respected, including after a one-off follow-up question.</li>
+      <li>Urgent, sensitive, or exact-format requests receive no unsolicited additions.</li>
+      <li>Uncertain facts are verified, qualified appropriately, or omitted — not invented.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    <a href="https://github.com/JohannesRabauer/curiosity-engine-skill">curiosity-engine-skill</a>
+    — an Agent Skill by
+    <a href="https://github.com/JohannesRabauer">@JohannesRabauer</a>
+  </p>
+</footer>
+
+</body>
+</html>

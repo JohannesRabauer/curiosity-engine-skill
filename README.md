@@ -1,7 +1,22 @@
-# Curiosity Engine
+# 💡 Curiosity Engine
+
+[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-ffcb47)](SKILL.md)
+[![Website](https://img.shields.io/badge/docs-website-58a6ff)](https://johannesrabauer.github.io/curiosity-engine-skill/)
+[![License](https://img.shields.io/badge/license-see%20repo-lightgrey)](#)
 
 An assistant skill that helps with the task at hand and gently sparks curiosity
 when it fits. Nothing forced, nothing made up—just space to think.
+
+**🌐 [See the project website](https://johannesrabauer.github.io/curiosity-engine-skill/)**
+for a quick visual tour, or keep reading for the full details and install
+instructions below.
+
+## Contents
+
+- [How it works](#how-it-works)
+- [Install (Agent Skills hosts)](#install-agent-skills-hosts)
+- [Install (plain system prompt)](#install-plain-system-prompt--eg-chatgpt-custom-instructions)
+- [Try it](#try-it)
 
 ## How it works
 
@@ -58,3 +73,8 @@ code; validate them in your host assistant by checking that:
 - An opt-out remains respected, including after a one-off follow-up question.
 - Urgent, sensitive, or exact-format requests receive no unsolicited additions.
 - Uncertain facts are verified, qualified appropriately, or omitted—not invented.
+
+---
+
+🌐 **[Project website](https://johannesrabauer.github.io/curiosity-engine-skill/)**
+· 📄 **[SKILL.md](SKILL.md)** · 👤 [@JohannesRabauer](https://github.com/JohannesRabauer)
